@@ -230,7 +230,7 @@ var d=layers[k];activate("[data-layer]",k,"data-layer");
 document.getElementById("anatomy-panel").innerHTML='<div><div class="overline">The decision</div><div class="thesis">'+esc(d.thesis)+'</div><p>'+esc(d.description)+'</p></div><div class="evidence-box"><h3>'+esc(d.title)+'</h3><ul>'+d.checks.map(function(v){return '<li>'+esc(v)+'</li>';}).join('')+'</ul>'+link(d.url,d.source)+'</div>';
 }
 document.querySelectorAll("[data-layer]").forEach(function(b){b.addEventListener("click",function(){setLayer(b.getAttribute("data-layer"));document.getElementById("anatomy").scrollIntoView({behavior:"smooth"});});});
-document.querySelectorAll("[data-stack]").forEach(function(b){b.addEventListener("click",function(){setLayer(b.getAttribute("data-stack"));});});
+document.querySelectorAll("[data-stack]").forEach(function(b){b.addEventListener("click",function(){setLayer(b.getAttribute("data-stack"));document.getElementById("anatomy").scrollIntoView({behavior:"smooth"});});});
 var sourceCCIR="https://www.ccir-ccrra.org/Documents/View/4001#page=55";
 var sourceCL="https://www.canadalife.com/investing-saving/mutual-funds/canada-life-mutual-funds/disclosures.html";
 var tracks={
